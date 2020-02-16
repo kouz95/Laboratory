@@ -11,9 +11,9 @@ public class UsingComparator {
 		//.reversed();
 
 		List<Apple> apples = new ArrayList<>();
-		Apple a1 = new Apple(150);
-		Apple a2 = new Apple(100);
-		Apple a3 = new Apple(200);
+		Apple a1 = new Apple(150, Color.RED);
+		Apple a2 = new Apple(100, Color.GREEN);
+		Apple a3 = new Apple(200, Color.RED);
 		apples.add(a1);
 		apples.add(a2);
 		apples.add(a3);
