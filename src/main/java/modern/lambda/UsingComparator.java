@@ -8,6 +8,7 @@ public class UsingComparator {
 	public static void main(String[] args) {
 		Comparator<Apple> byWeight =
 			Comparator.comparing(Apple::getWeight);
+		//.reversed();
 
 		List<Apple> apples = new ArrayList<>();
 		Apple a1 = new Apple(150);
