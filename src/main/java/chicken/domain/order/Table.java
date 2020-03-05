@@ -1,4 +1,4 @@
-package chicken.domain;
+package chicken.domain.order;
 
 import java.util.Objects;
 

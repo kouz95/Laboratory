@@ -3,6 +3,8 @@ package chicken.domain;
 import java.util.Collections;
 import java.util.List;
 
+import chicken.domain.order.Table;
+
 public class TableRepository {
 	private static final List<Table> tables;
 

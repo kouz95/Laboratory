@@ -1,9 +1,11 @@
 package chicken.domain;
 
-import static chicken.domain.MenuNumber.*;
+import static chicken.domain.menu.MenuNumber.*;
 import static org.assertj.core.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+import chicken.domain.menu.MenuNumber;
 
 public class MenuNumberTest {
 	@Test

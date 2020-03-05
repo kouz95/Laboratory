@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import chicken.domain.menu.Category;
+
 class CategoryTest {
 	@Test
 	void getKoreanName() {

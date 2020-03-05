@@ -3,6 +3,11 @@ package chicken.domain;
 import java.util.Collections;
 import java.util.List;
 
+import chicken.domain.menu.Category;
+import chicken.domain.menu.MenuNumber;
+import chicken.domain.menu.Price;
+import chicken.domain.order.Menu;
+
 public class MenuRepository {
 	private static final List<Menu> menus;
 

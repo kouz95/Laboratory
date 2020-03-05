@@ -1,4 +1,4 @@
-package chicken.domain;
+package chicken.domain.order;
 
 public class MenuCount {
 	public static final String COUNT_OVER = "메뉴의 최대 수량은 99 입니다.";

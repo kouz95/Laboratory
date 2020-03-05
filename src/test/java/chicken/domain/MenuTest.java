@@ -4,6 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import chicken.domain.menu.Category;
+import chicken.domain.menu.MenuNumber;
+import chicken.domain.menu.Price;
+import chicken.domain.order.Menu;
+
 class MenuTest {
 	@Test
 	void getInNumberEquals() {

@@ -4,6 +4,8 @@ import static org.assertj.core.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import chicken.domain.strategy.Ordering;
+
 public class FunctionTypeTest {
 	@Test
 	void getOrder() {
@@ -42,7 +44,11 @@ public class FunctionTypeTest {
 	@Test
 	void throwExceptionForNoType() {
 		String value = "4";
-
 		assertThatNullPointerException().isThrownBy(() -> FunctionType.of(value));
+	}
+
+	@Test
+	void getStrategy() {
+		assertThat(FunctionType.getStrategyOf("1")).isInstanceOf(Ordering.class);
 	}
 }

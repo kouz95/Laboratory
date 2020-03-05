@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import chicken.domain.order.Table;
+
 class TableTest {
 	@Test
 	void getTableNumber() {
