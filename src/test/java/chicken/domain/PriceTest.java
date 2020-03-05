@@ -9,7 +9,14 @@ class PriceTest {
 	@Test
 	void throwExceptionWhenUnderZero() {
 		assertThatIllegalArgumentException().isThrownBy(() ->
-			new Price(-1)
+			new Price("-1")
 		).withMessage(MIN_AMOUNT);
+	}
+
+	@Test
+	void throwExceptionWhenNotNumber() {
+		assertThatThrownBy(() -> new Price("a"))
+			.isInstanceOf(NumberFormatException.class)
+			.hasMessage(NOT_NUMBER);
 	}
 }
