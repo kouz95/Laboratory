@@ -9,7 +9,7 @@ public class MenuCountTest {
 	@Test
 	void throwExceptionsWhenGivenOver99() {
 		assertThatIllegalArgumentException().isThrownBy(() ->
-			new MenuCount(100))
-			.withMessage(COUNT_OVER);
+			new MenuCount(100)
+		).withMessage(COUNT_OVER);
 	}
 }
