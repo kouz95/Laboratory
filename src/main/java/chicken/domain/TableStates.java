@@ -24,6 +24,10 @@ public class TableStates {
 		states.replace(table, isOrder);
 	}
 
+	public boolean hasOrderIn(Table table) {
+		return states.get(table);
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o)

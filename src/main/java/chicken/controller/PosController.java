@@ -16,5 +16,6 @@ public class PosController {
 	public static void run() {
 		printMainScreen();
 		FunctionType functionType = FunctionType.of(inputFunctionType());
+		printTables(pos.tableStates());
 	}
 }

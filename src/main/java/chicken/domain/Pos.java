@@ -10,4 +10,8 @@ public class Pos {
 		posStrategy = FunctionType.getStrategyOf(functionType);
 		posStrategy.act(orders, order);
 	}
+
+	public TableStates tableStates() {
+		return orders.getTableStates();
+	}
 }
