@@ -28,4 +28,21 @@ public class FunctionTypeTest {
 		FunctionType actual = FunctionType.of(value);
 		assertThat(actual).isEqualTo(expected);
 	}
+
+	@Test
+	void getFunctionTypeByOf() {
+		String value = "1";
+
+		FunctionType expected = FunctionType.ORDER;
+		FunctionType actual = FunctionType.of(value);
+
+		assertThat(actual).isEqualTo(expected);
+	}
+
+	@Test
+	void throwExceptionForNoType() {
+		String value = "4";
+
+		assertThatNullPointerException().isThrownBy(() -> FunctionType.of(value));
+	}
 }
