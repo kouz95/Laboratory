@@ -20,4 +20,20 @@ public class Menu {
 	public boolean isNumberEquals(MenuNumber number) {
 		return this.number.equals(number);
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public MenuNumber getNumber() {
+		return number;
+	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public Price getPrice() {
+		return price;
+	}
 }

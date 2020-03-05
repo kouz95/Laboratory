@@ -1,9 +1,12 @@
 package chicken.view;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 import chicken.domain.TableStates;
+import chicken.domain.order.Menu;
 import chicken.domain.order.Table;
+import chicken.domain.repository.MenuRepository;
 import chicken.domain.repository.TableRepository;
 
 public class OutputView {
@@ -45,5 +48,20 @@ public class OutputView {
 	private static void makeMiddleLine(StringBuilder stringBuilder, List<Table> tables) {
 		tables.forEach(table -> stringBuilder.append(String.format(TABLE_FORMAT, table.getNumber())));
 		stringBuilder.append(NEW_LINE);
+	}
+
+	public static void printMenus() {
+		MenuRepository.menus()
+			.forEach(printMenu());
+	}
+
+	private static Consumer<Menu> printMenu() {
+		return menu -> System.out.println(
+			"[" + menu.getCategory().toKorean() + "] " +
+				menu.getNumber().toString() + " - " +
+				menu.getName() + " : " +
+				menu.getPrice().toString() + "원"
+		);
+
 	}
 }

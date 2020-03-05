@@ -13,4 +13,9 @@ public class Price {
 		}
 		this.price = Integer.parseInt(line);
 	}
+
+	@Override
+	public String toString() {
+		return String.valueOf(price);
+	}
 }

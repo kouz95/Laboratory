@@ -5,6 +5,7 @@ import static chicken.view.InputView.*;
 
 import chicken.domain.FunctionType;
 import chicken.domain.Pos;
+import chicken.domain.order.Table;
 
 public class PosController {
 	private static final Pos pos;
@@ -17,5 +18,7 @@ public class PosController {
 		printMainScreen();
 		FunctionType functionType = FunctionType.of(inputFunctionType());
 		printTables(pos.tableStates());
+		Table table = new Table(Integer.parseInt(inputTableNumber()));
+		printMenus();
 	}
 }
