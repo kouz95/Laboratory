@@ -7,6 +7,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import chicken.domain.order.Table;
+import chicken.domain.repository.TableRepository;
 
 public class TableRepositoryTest {
 	@Test

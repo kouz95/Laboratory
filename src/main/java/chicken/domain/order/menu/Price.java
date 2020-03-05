@@ -1,4 +1,4 @@
-package chicken.domain.menu;
+package chicken.domain.order.menu;
 
 import chicken.util.StringUtils;
 

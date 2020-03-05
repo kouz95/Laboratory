@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import chicken.domain.menu.Category;
+import chicken.domain.order.menu.Category;
 
 class CategoryTest {
 	@Test

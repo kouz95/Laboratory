@@ -8,4 +8,10 @@ public class Orders {
 	public Orders(List<Order> orders) {
 		this.orders = orders;
 	}
+
+	public TableStates getTableStates() {
+		TableStates result = new TableStates();
+		orders.forEach(order -> result.replace(order.getTable(), true));
+		return result;
+	}
 }

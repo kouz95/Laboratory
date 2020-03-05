@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import chicken.domain.strategy.Ordering;
 import chicken.domain.strategy.Paying;
+import chicken.domain.strategy.PosStrategy;
 import chicken.domain.strategy.Quitting;
 
 public enum FunctionType {

@@ -14,4 +14,8 @@ public class Order {
 		this.menuCount = menuCount;
 		this.table = table;
 	}
+
+	public Table getTable() {
+		return table;
+	}
 }

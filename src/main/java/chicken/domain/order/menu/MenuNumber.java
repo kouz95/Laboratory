@@ -1,4 +1,4 @@
-package chicken.domain.menu;
+package chicken.domain.order.menu;
 
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public class MenuNumber {
 		if (StringUtils.isNotDigit(number)) {
 			throw new NumberFormatException(NOT_NUMBER);
 		}
-		this.number = Integer.parseInt(number);;
+		this.number = Integer.parseInt(number);
 	}
 
 	@Override

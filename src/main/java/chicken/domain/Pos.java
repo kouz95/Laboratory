@@ -1,11 +1,13 @@
 package chicken.domain;
 
+import chicken.domain.strategy.PosStrategy;
+
 public class Pos {
 	private Orders orders;
 	private PosStrategy posStrategy;
 
-	public void run(String functionType) {
+	public void act(String functionType, Order order) {
 		posStrategy = FunctionType.getStrategyOf(functionType);
-		posStrategy.act(orders);
+		posStrategy.act(orders, order);
 	}
 }

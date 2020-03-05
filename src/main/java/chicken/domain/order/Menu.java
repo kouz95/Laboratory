@@ -1,8 +1,8 @@
 package chicken.domain.order;
 
-import chicken.domain.menu.Category;
-import chicken.domain.menu.MenuNumber;
-import chicken.domain.menu.Price;
+import chicken.domain.order.menu.Category;
+import chicken.domain.order.menu.MenuNumber;
+import chicken.domain.order.menu.Price;
 
 public class Menu {
 	private final MenuNumber number;

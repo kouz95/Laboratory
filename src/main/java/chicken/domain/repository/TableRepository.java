@@ -1,4 +1,4 @@
-package chicken.domain;
+package chicken.domain.repository;
 
 import java.util.Collections;
 import java.util.List;
