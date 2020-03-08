@@ -20,9 +20,9 @@ class TableStatesTest {
 
 	@BeforeEach
 	void init() {
-		table = new Table(1);
+		table = new Table("1");
 		Menu menu = new Menu(new MenuNumber("1"), "a", Category.CHICKEN, new Price("1"));
-		Order order = new Order(menu, new MenuCount(1), table);
+		Order order = new Order(menu, new MenuCount("1"), table);
 		orders = new Orders(Collections.singletonList(order));
 	}
 
@@ -30,7 +30,7 @@ class TableStatesTest {
 	void getHasOrderInTable() {
 		TableStates tableStates = orders.getTableStates();
 		assertTrue(tableStates.hasOrderIn(table));
-		assertFalse(tableStates.hasOrderIn(new Table(2)));
+		assertFalse(tableStates.hasOrderIn(new Table("2")));
 	}
 
 }

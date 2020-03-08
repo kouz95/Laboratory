@@ -1,13 +1,19 @@
 package chicken.domain;
 
+import java.util.ArrayList;
+
 import chicken.domain.strategy.PosStrategy;
 
 public class Pos {
 	private Orders orders;
 	private PosStrategy posStrategy;
 
-	public void act(String functionType, Order order) {
-		posStrategy = FunctionType.getStrategyOf(functionType);
+	public Pos() {
+		this.orders = new Orders(new ArrayList<>());
+	}
+
+	public void run(PosFunctionType functionType, Order order) {
+		posStrategy = functionType.getPosStrategy();
 		posStrategy.act(orders, order);
 	}
 

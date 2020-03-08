@@ -7,7 +7,7 @@ import chicken.domain.strategy.Paying;
 import chicken.domain.strategy.PosStrategy;
 import chicken.domain.strategy.Quitting;
 
-public enum FunctionType {
+public enum PosFunctionType {
 	ORDER("1", new Ordering()),
 	PAY("2", new Paying()),
 	QUIT("3", new Quitting());
@@ -15,19 +15,23 @@ public enum FunctionType {
 	private final String functionType;
 	private final PosStrategy posStrategy;
 
-	FunctionType(String functionType, PosStrategy posStrategy) {
+	PosFunctionType(String functionType, PosStrategy posStrategy) {
 		this.functionType = functionType;
 		this.posStrategy = posStrategy;
 	}
 
-	public static FunctionType of(String functionType) {
-		return Arrays.stream(FunctionType.values())
+	public static PosFunctionType of(String functionType) {
+		return Arrays.stream(PosFunctionType.values())
 			.filter(value -> functionType.equals(value.functionType))
 			.findFirst()
 			.orElseThrow(NullPointerException::new);
 	}
 
 	public static PosStrategy getStrategyOf(String functionType) {
-		return FunctionType.of(functionType).posStrategy;
+		return PosFunctionType.of(functionType).posStrategy;
+	}
+
+	public PosStrategy getPosStrategy() {
+		return posStrategy;
 	}
 }

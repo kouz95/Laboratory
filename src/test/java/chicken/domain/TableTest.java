@@ -9,7 +9,7 @@ import chicken.domain.order.Table;
 class TableTest {
 	@Test
 	void getTableNumber() {
-		int value = 1;
+		String value = "1";
 		Table table = new Table(value);
 
 		int expected = 1;

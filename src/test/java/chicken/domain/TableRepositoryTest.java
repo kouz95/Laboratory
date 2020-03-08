@@ -13,12 +13,12 @@ public class TableRepositoryTest {
 	@Test
 	void getTableList() {
 		List<Table> expected = List.of(
-			new Table(1),
-			new Table(2),
-			new Table(3),
-			new Table(5),
-			new Table(6),
-			new Table(8)
+			new Table("1"),
+			new Table("2"),
+			new Table("3"),
+			new Table("5"),
+			new Table("6"),
+			new Table("8")
 		);
 
 		List<Table> actual = TableRepository.tables();

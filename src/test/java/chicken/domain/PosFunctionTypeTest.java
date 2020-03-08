@@ -6,28 +6,28 @@ import org.junit.jupiter.api.Test;
 
 import chicken.domain.strategy.Ordering;
 
-public class FunctionTypeTest {
+public class PosFunctionTypeTest {
 	@Test
 	void getOrder() {
 		String value = "1";
-		FunctionType expected = FunctionType.ORDER;
-		FunctionType actual = FunctionType.of(value);
+		PosFunctionType expected = PosFunctionType.ORDER;
+		PosFunctionType actual = PosFunctionType.of(value);
 		assertThat(actual).isEqualTo(expected);
 	}
 
 	@Test
 	void getPay() {
 		String value = "2";
-		FunctionType expected = FunctionType.PAY;
-		FunctionType actual = FunctionType.of(value);
+		PosFunctionType expected = PosFunctionType.PAY;
+		PosFunctionType actual = PosFunctionType.of(value);
 		assertThat(actual).isEqualTo(expected);
 	}
 
 	@Test
 	void getQuit() {
 		String value = "3";
-		FunctionType expected = FunctionType.QUIT;
-		FunctionType actual = FunctionType.of(value);
+		PosFunctionType expected = PosFunctionType.QUIT;
+		PosFunctionType actual = PosFunctionType.of(value);
 		assertThat(actual).isEqualTo(expected);
 	}
 
@@ -35,8 +35,8 @@ public class FunctionTypeTest {
 	void getFunctionTypeByOf() {
 		String value = "1";
 
-		FunctionType expected = FunctionType.ORDER;
-		FunctionType actual = FunctionType.of(value);
+		PosFunctionType expected = PosFunctionType.ORDER;
+		PosFunctionType actual = PosFunctionType.of(value);
 
 		assertThat(actual).isEqualTo(expected);
 	}
@@ -44,11 +44,11 @@ public class FunctionTypeTest {
 	@Test
 	void throwExceptionForNoType() {
 		String value = "4";
-		assertThatNullPointerException().isThrownBy(() -> FunctionType.of(value));
+		assertThatNullPointerException().isThrownBy(() -> PosFunctionType.of(value));
 	}
 
 	@Test
 	void getStrategy() {
-		assertThat(FunctionType.getStrategyOf("1")).isInstanceOf(Ordering.class);
+		assertThat(PosFunctionType.getStrategyOf("1")).isInstanceOf(Ordering.class);
 	}
 }

@@ -11,7 +11,14 @@ public class MenuCountTest {
 	@Test
 	void throwExceptionsWhenGivenOver99() {
 		assertThatIllegalArgumentException().isThrownBy(() ->
-			new MenuCount(100)
+			new MenuCount("100")
 		).withMessage(COUNT_OVER);
+	}
+
+	@Test
+	void throwExceptionsWhenGivenNotNumber() {
+		assertThatIllegalArgumentException().isThrownBy(() ->
+			new MenuCount("notNumber")
+		).withMessage(NOT_NUMBER);
 	}
 }

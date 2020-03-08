@@ -14,4 +14,8 @@ public class Orders {
 		orders.forEach(order -> result.replace(order.getTable(), true));
 		return result;
 	}
+
+	public void add(Order order) {
+		orders.add(order);
+	}
 }
