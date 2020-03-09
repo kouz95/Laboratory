@@ -6,6 +6,6 @@ import chicken.domain.Orders;
 public class Paying implements PosStrategy {
 	@Override
 	public void act(Orders orders, Order order) {
-
+		orders.delete(order);
 	}
 }

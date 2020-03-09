@@ -1,7 +1,9 @@
 package chicken.domain;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import chicken.domain.order.Table;
 import chicken.domain.strategy.PosStrategy;
 
 public class Pos {
@@ -19,5 +21,13 @@ public class Pos {
 
 	public TableStates tableStates() {
 		return orders.getTableStates();
+	}
+
+	public List<Order> getOrdersIn(Table table) {
+		return orders.getOrdersIn(table);
+	}
+
+	public double getTotalPriceIn(Table table, PaymentType paymentType) {
+		return paymentType.getDiscountedPrice(orders.getTotalPriceIn(table));
 	}
 }

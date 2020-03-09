@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import chicken.domain.order.menu.Category;
 import chicken.domain.order.menu.MenuNumber;
-import chicken.domain.order.menu.Price;
 import chicken.domain.order.Menu;
 
 class MenuTest {

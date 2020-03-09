@@ -5,12 +5,10 @@ import java.util.Arrays;
 import chicken.domain.strategy.Ordering;
 import chicken.domain.strategy.Paying;
 import chicken.domain.strategy.PosStrategy;
-import chicken.domain.strategy.Quitting;
 
 public enum PosFunctionType {
 	ORDER("1", new Ordering()),
-	PAY("2", new Paying()),
-	QUIT("3", new Quitting());
+	PAY("2", new Paying());
 
 	private final String functionType;
 	private final PosStrategy posStrategy;

@@ -24,14 +24,6 @@ public class PosFunctionTypeTest {
 	}
 
 	@Test
-	void getQuit() {
-		String value = "3";
-		PosFunctionType expected = PosFunctionType.QUIT;
-		PosFunctionType actual = PosFunctionType.of(value);
-		assertThat(actual).isEqualTo(expected);
-	}
-
-	@Test
 	void getFunctionTypeByOf() {
 		String value = "1";
 

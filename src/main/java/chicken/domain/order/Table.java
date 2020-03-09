@@ -19,6 +19,15 @@ public class Table {
 		return number;
 	}
 
+	public boolean isNumberEquals(String tableNumber) {
+		return this.number == Integer.parseInt(tableNumber);
+	}
+
+	@Override
+	public String toString() {
+		return String.valueOf(number);
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o)

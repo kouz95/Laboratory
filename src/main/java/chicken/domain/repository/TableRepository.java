@@ -22,4 +22,11 @@ public class TableRepository {
 	public static List<Table> tables() {
 		return Collections.unmodifiableList(tables);
 	}
+
+	public static Table getTableOf(String tableNumber) {
+		return tables.stream()
+			.filter(table -> table.isNumberEquals(tableNumber))
+			.findFirst()
+			.orElseThrow(NullPointerException::new);
+	}
 }

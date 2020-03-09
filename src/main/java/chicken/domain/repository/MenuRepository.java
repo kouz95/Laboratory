@@ -5,7 +5,7 @@ import java.util.List;
 
 import chicken.domain.order.menu.Category;
 import chicken.domain.order.menu.MenuNumber;
-import chicken.domain.order.menu.Price;
+import chicken.domain.Price;
 import chicken.domain.order.Menu;
 
 public class MenuRepository {

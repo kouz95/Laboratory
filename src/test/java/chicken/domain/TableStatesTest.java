@@ -12,7 +12,6 @@ import chicken.domain.order.MenuCount;
 import chicken.domain.order.Table;
 import chicken.domain.order.menu.Category;
 import chicken.domain.order.menu.MenuNumber;
-import chicken.domain.order.menu.Price;
 
 class TableStatesTest {
 	private Orders orders;

@@ -14,7 +14,6 @@ import chicken.domain.order.MenuCount;
 import chicken.domain.order.Table;
 import chicken.domain.order.menu.Category;
 import chicken.domain.order.menu.MenuNumber;
-import chicken.domain.order.menu.Price;
 import chicken.domain.repository.TableRepository;
 
 class OrdersTest {

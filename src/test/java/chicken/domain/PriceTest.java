@@ -1,11 +1,9 @@
 package chicken.domain;
 
-import static chicken.domain.order.menu.Price.*;
+import static chicken.domain.Price.*;
 import static org.assertj.core.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-
-import chicken.domain.order.menu.Price;
 
 class PriceTest {
 	@Test

@@ -3,6 +3,7 @@ package chicken.view;
 import java.util.List;
 import java.util.function.Consumer;
 
+import chicken.domain.Order;
 import chicken.domain.TableStates;
 import chicken.domain.order.Menu;
 import chicken.domain.order.Table;
@@ -62,6 +63,23 @@ public class OutputView {
 				menu.getName() + " : " +
 				menu.getPrice().toString() + "원"
 		);
+	}
 
+	public static void printStatement(List<Order> orders) {
+		System.out.println("## 주문 내역");
+		System.out.println("메뉴 수량 금액");
+		orders.forEach(order -> {
+			Menu menu = order.getMenu();
+			System.out.println(
+				menu.getCategory().toKorean() + " " +
+				order.getMenuCount().toString() + " " +
+					menu.getPrice().toString()
+			);
+		});
+	}
+
+	public static void printTotalPriceOf(double totalPrice) {
+		System.out.println("## 최종 결제할 금액");
+		System.out.println(totalPrice + "원");
 	}
 }
