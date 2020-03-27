@@ -10,3 +10,4 @@ gen
 
 # Project exclude paths
 /.gradle/
+/src/main/java/blackjack/
