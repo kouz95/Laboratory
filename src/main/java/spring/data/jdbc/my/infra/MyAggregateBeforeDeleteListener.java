@@ -2,6 +2,7 @@ package spring.data.jdbc.my.infra;
 
 import java.util.Objects;
 
+import org.springframework.data.jdbc.core.mapping.AggregateReference;
 import org.springframework.data.relational.core.mapping.event.AbstractRelationalEventListener;
 import org.springframework.data.relational.core.mapping.event.BeforeDeleteEvent;
 import org.springframework.stereotype.Component;
@@ -19,7 +20,7 @@ public class MyAggregateBeforeDeleteListener extends AbstractRelationalEventList
 
     @Override
     protected void onBeforeDelete(BeforeDeleteEvent<MyAggregate> event) {
-        refAggregateRepository.deleteByMyAggregateId(
-            Objects.requireNonNull(event.getEntity()).getId());
+        Long myAggregateId = Objects.requireNonNull(event.getEntity()).getId();
+        refAggregateRepository.deleteByMyAggregateId(AggregateReference.to(myAggregateId));
     }
 }
