@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
 import org.springframework.context.annotation.Import;
 
+import spring.data.jdbc.my.domain.MyAggregate;
 import spring.data.jdbc.my.infra.MyAggregateBeforeDeleteListener;
 import spring.data.jdbc.ref.application.RefAggregateService;
 import spring.data.jdbc.ref.domain.RefAggregate;
@@ -32,5 +33,12 @@ class MyAggregateServiceTest {
         assertThatThrownBy(() -> refAggregateService.findById(refAggregateId))
         .isInstanceOf(RuntimeException.class)
         .hasMessage("not exist");
+    }
+
+    @Test
+    void queryLookup() {
+        myAggregateService.create("test");
+        MyAggregate test = myAggregateService.findByName("test");
+        assertThat(test).isNotNull();
     }
 }

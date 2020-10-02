@@ -24,4 +24,8 @@ public class MyAggregateService {
             .orElseThrow(RuntimeException::new);
         myAggregateRepository.delete(myAggregate);
     }
+
+    public MyAggregate findByName(String name) {
+        return myAggregateRepository.findByName(new Name(name)).orElseThrow(RuntimeException::new);
+    }
 }
